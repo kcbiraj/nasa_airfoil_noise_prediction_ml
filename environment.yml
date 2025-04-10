@@ -1,0 +1,33 @@
+# Conda Environment Setup Instructions
+#  - Using an environment.yml file with conda
+#  - Key Terminal Commands:
+#
+#    conda env create -f environment.yml
+#    conda env update --file environment.yml --prune
+#    conda env export --nasa-airfoilnoise-prediction > environment.yml
+#    conda env remove --name nasa-airfoilnoise-prediction
+#    conda env list
+
+name: nasa-airfoilnoise-prediction
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11.11
+  - pip
+  - bottleneck
+  - pip:
+      - numpy==1.23.5
+      - pandas==1.5.2
+      - ipykernel==6.17.1
+      - ipython==8.7.0
+      - jupyter-client==7.4.7
+      - jupyter-core==5.1.0
+      - matplotlib==3.6.2
+      - seaborn==0.12.1
+      - scikit-learn==1.1.3
+      - pyspark==3.4.1
+      - pyarrow==12.0.1
+      - pyodbc==4.0.39
+      - findspark==2.0.1
