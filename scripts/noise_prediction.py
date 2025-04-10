@@ -40,21 +40,18 @@ df = spark.read.csv(
 
 
 # Task 4 - Printing the top 5 rows of the dataset
-df.show(5)
+df.show(10)
 
 # Task 5 - Printing the Schema of the dataset
 df.printSchema()
-
 
 # Task 6 - Printing the total number of rows in the dataset
 rowcount1 = df.count()
 print(rowcount1)
 
-
 # Task 7 - Dropping all the duplicate rows from the dataset
 df = df.dropDuplicates()
 df.show()
-
 
 # Task 8 - Printing the total number of rows in the dataset after dropping the duplicates
 rowcount2 = df.count()
